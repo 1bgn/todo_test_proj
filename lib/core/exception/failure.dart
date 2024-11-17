@@ -3,10 +3,10 @@ import 'package:equatable/equatable.dart';
 class Failure with EquatableMixin implements Exception{
  final String message;
  final int? statusCode;
- final Exception exception;
+ final Exception? exception;
  final StackTrace stackTrace;
 
-  Failure({required this.message,  this.statusCode, required this.exception,  this.stackTrace=StackTrace.empty});
+  Failure({required this.message,  this.statusCode,  this.exception,  this.stackTrace=StackTrace.empty});
 
   @override
   List<dynamic> get props => [message,stackTrace,statusCode,exception];
